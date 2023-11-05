@@ -71,12 +71,12 @@ module.exports.createPoint = async (req, res) => {
 
 module.exports.editPoint = async (req, res) => {
     try {
+        const id_point = req.params.id_point;
         const {
-            id_point,
             nama_point,
             geom
         } = req.body
-        const sqlquery = `UPDATE point.point SET id_point = '${id_point}', nama_point = '${nama_point}', geom = ST_GeomFromText('POINT(${geom})', 3857) WHERE id_point = '${id_point}'`;
+        const sqlquery = `UPDATE point.point SET nama_point = '${nama_point}', geom = ST_GeomFromText('POINT(${geom})', 3857) WHERE id_point = '${id_point}'`;
         db.query(sqlquery, (err, result) => {
             if (err) {
                 console.error(err);

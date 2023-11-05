@@ -76,13 +76,13 @@ module.exports.createPolygon = async (req, res) => {
 //edit polygon
 module.exports.editPolygon = async (req, res) => {
     try {
+        const id_polygon = req.params.id_polygon;
         const {
-            id_polygon,
             nama_polygon,
             geom,
             deskripsi
         } = req.body
-        const sqlquery = `UPDATE polygon.polygon SET id_polygon = '${id_polygon}', nama_polygon = '${nama_polygon}', geom = ST_GeomFromText('POLYGON((${geom}))', 4326), deskripsi = '${deskripsi}' WHERE id_polygon = '${id_polygon}';
+        const sqlquery = `UPDATE polygon.polygon SET nama_polygon = '${nama_polygon}', geom = ST_GeomFromText('POLYGON((${geom}))', 4326), deskripsi = '${deskripsi}' WHERE id_polygon = '${id_polygon}';
         `;
         db.query(sqlquery, (err, result) => {
             if (err) {

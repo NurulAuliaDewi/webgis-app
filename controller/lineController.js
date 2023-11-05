@@ -74,13 +74,13 @@ module.exports.createLine = async (req, res) => {
 //edit line
 module.exports.editLine = async (req, res) => {
     try {
+        const id_line = req.params.id_line;
         const {
-            id_line,
             nama_line,
             geom,
             deskripsi
         } = req.body
-        const sqlquery = `UPDATE line.line SET id_line ='${id_line}', nama_line = '${nama_line}', geom = ST_GeomFromText('LINESTRING(${geom})', 3857), deskripsi = '${deskripsi}' WHERE id_line = '${id_line}';
+        const sqlquery = `UPDATE line.line SET nama_line = '${nama_line}', geom = ST_GeomFromText('LINESTRING(${geom})', 3857), deskripsi = '${deskripsi}' WHERE id_line = '${id_line}';
         `;
         db.query(sqlquery, (err, result) => {
             if (err) {
