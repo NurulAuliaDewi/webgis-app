@@ -52,7 +52,9 @@ module.exports.createPoint = async (req, res) => {
                 res.status(200).json({
                     success: true,
                     message: 'Berhasil menambahkan point',
-                    data: result,
+                    id_point: id_point,
+                    nama_point: nama_point,
+                    geom: geom
                 });
             }
         });
@@ -87,7 +89,9 @@ module.exports.editPoint = async (req, res) => {
                 res.status(200).json({
                     success: true,
                     message: 'Berhasil mengubah point',
-                    data: result,
+                    id_point: id_point,
+                    nama_point: nama_point,
+                    geom: geom
                 });
             }
         });
@@ -118,7 +122,6 @@ module.exports.deletePoint = async (req, res) => {
                 res.status(200).json({
                     success: true,
                     message: 'Berhasil menghapus point',
-                    data: result,
                 });
             }
         });

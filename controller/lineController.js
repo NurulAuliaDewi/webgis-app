@@ -15,7 +15,7 @@ module.exports.getLine = async (req, res) => {
             } else {
                 res.status(200).json({
                     success: true,
-                    message: 'Berhasil mengambil data point',
+                    message: 'Berhasil mengambil data line',
                     data: result.rows,
                 });
             }
@@ -53,7 +53,10 @@ module.exports.createLine = async (req, res) => {
                 res.status(200).json({
                     success: true,
                     message: 'Berhasil menambahkan line',
-                    data: result,
+                    id_line: id_line,
+                    nama_line: nama_line,
+                    geom: geom,
+                    deskripsi: deskripsi
                 });
             }
         });
@@ -91,7 +94,10 @@ module.exports.editLine = async (req, res) => {
                 res.status(200).json({
                     success: true,
                     message: 'Berhasil mengubah line',
-                    data: result,
+                    id_line: id_line,
+                    nama_line: nama_line,
+                    geom: geom,
+                    deskripsi: deskripsi
                 });
             }
         });
@@ -121,8 +127,7 @@ module.exports.deleteLine = async (req, res) => {
             } else {
                 res.status(200).json({
                     success: true,
-                    message: 'Berhasil menghapus line',
-                    data: result,
+                    message: 'Berhasil menghapus line'
                 });
             }
         });

@@ -40,8 +40,8 @@ module.exports.createPolygon = async (req, res) => {
             deskripsi
         } = req.body
         const sqlquery = `INSERT INTO polygon.polygon(id_polygon, nama_polygon, geom, luas_area, deskripsi)
-        VALUES ('${id_polygon}', '${nama_polygon}', ST_GeomFromText('POLYGON((${geom}))', 4326), ST_Area(ST_GeomFromText('POLYGON((${geom}))', 4326)), '${deskripsi}');
-        ;`
+        VALUES (${id_polygon}, '${nama_polygon}', ST_GeomFromText('POLYGON((${geom}))', 4326), ST_Area(ST_GeomFromText('POLYGON((${geom}))', 4326)), '${deskripsi}')`;
+
         console.log(sqlquery);
         db.query(sqlquery, (err, result) => {
             if (err) {
@@ -55,7 +55,10 @@ module.exports.createPolygon = async (req, res) => {
                 res.status(200).json({
                     success: true,
                     message: 'Berhasil menambahkan polygon',
-                    data: result,
+                    id_polygon: id_polygon,
+                    nama_polygon: nama_polygon,
+                    geom: geom,
+                    deskripsi: deskripsi
                 });
             }
         });
@@ -92,8 +95,11 @@ module.exports.editPolygon = async (req, res) => {
             } else {
                 res.status(200).json({
                     success: true,
-                    message: 'Berhasil mengubah polygon',
-                    data: result,
+                    message: 'Berhasil menambahkan polygon',
+                    id_polygon: id_polygon,
+                    nama_polygon: nama_polygon,
+                    geom: geom,
+                    deskripsi: deskripsi
                 });
             }
         });
@@ -124,7 +130,6 @@ module.exports.deletePolygon = async (req, res) => {
                 res.status(200).json({
                     success: true,
                     message: 'Berhasil menghapus polygon',
-                    data: result,
                 });
             }
         });
