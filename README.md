@@ -7,8 +7,6 @@ Webgis-App adalah backend dari mini aplikasi yang memungkinkan Anda untuk melaku
 
 - [@Nurul Aulia Dewi](https://github.com/NurulAuliaDewi)
 
-
-## Get Started
 Berikut merupakan cara untuk menggunakan aplikasi ini
 
 1. Download Aplikasi
@@ -19,9 +17,15 @@ Berikut merupakan cara untuk menggunakan aplikasi ini
 2. Export SQL
 Berikut beberapa langkahnya :
 - buat database dengan nama webgis
-- kemudian jalankan atau export file sql pada yang tedapat pada repositri
+- kemudian jalankan atau export file webgis.sql pada yang tedapat pada repositori
+- ubah host, user, port, dan password di file dbConnection yang berada folder config di project aplikasi sesuai dengan pengaturan postgreesql yang ada pada komputer
 
-3. Jalankan Aplikasi
+3. install repository
+```bash
+  npm install
+```
+
+4. Jalankan Aplikasi
 ```bash
   npm run test
 ```
