@@ -39,7 +39,7 @@ Berikut beberapa langkahnya :
 ```javascript
 {
     "success" : bool,
-    "message" : string,
+    "message" : char varying,
     "data"    : object
 }
 ```
