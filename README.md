@@ -78,17 +78,17 @@ Berikut beberapa langkahnya :
 #### request body
 | Parameter     | Type     | Description                       |
 | :------------ | :------- | :-------------------------------- |
-| `id_point`    | `int`    | id dari point                     |
-| `nama_point`  | `string` | nama tempat point                 |
+| `id_point`    | `bigint`    | id dari point                     |
+| `nama_point`  | `char varying` | nama tempat point                 |
 | `geom`        | `geometry` | lokasi atau geometry dari point                 |
 
 #### response
 ```javascript
 {
     "success" : bool,
-    "message" : string,
-    "id_point": int,
-    "nama_point" : string,
+    "message" : char varying,
+    "id_point": bigint,
+    "nama_point" : char varying,
     "geom" : geometry
 
 }
@@ -116,23 +116,23 @@ Berikut beberapa langkahnya :
 #### request Parames
 | Parameter     | Type     | Description                       |
 | :------------ | :------- | :-------------------------------- |
-| `id_point`    | `int`    | id dari point                     |
+| `id_point`    | `bigint`    | id dari point                     |
 
 
 #### request body
 | Parameter     | Type     | Description                       |
 | :------------ | :------- | :-------------------------------- |
-| `id_point`    | `int`    | id dari point                     |
-| `nama_point`  | `string` | nama tempat point                 |
+| `id_point`    | `bigint`    | id dari point                     |
+| `nama_point`  | `char varying` | nama tempat point                 |
 | `geom`        | `geometry` | lokasi atau geometry dari point                 |
 
 #### response
 ```javascript
 {
     "success" : bool,
-    "message" : string,
-    "id_point": int,
-    "nama_point" : string,
+    "message" : char varying,
+    "id_point": bigint,
+    "nama_point" : char varying,
     "geom" : geometry
 
 }
@@ -159,14 +159,14 @@ Berikut beberapa langkahnya :
 #### request Parames
 | Parameter     | Type     | Description                       |
 | :------------ | :------- | :-------------------------------- |
-| `id_point`    | `int`    | id dari point                     |
+| `id_point`    | `bigint`    | id dari point                     |
 
 
 #### response
 ```javascript
 {
     "success" : bool,
-    "message" : string,
+    "message" : char varying,
 }
 ```
 #### example response
@@ -187,8 +187,8 @@ Berikut beberapa langkahnya :
 #### request body
 | Parameter     | Type     | Description                       |
 | :------------ | :------- | :-------------------------------- |
-| `id_line`    | `int`    | id dari line                     |
-| `nama_line`  | `string` | nama tempat dari line                 |
+| `id_line`    | `bigint`    | id dari line                     |
+| `nama_line`  | `char varying` | nama tempat dari line                 |
 | `geom`        | `geometry` | lokasi atau koordinat dari line                 |
 | `deskripsi`        | `string` | deskripsi lokasi dari line                 |
 
@@ -197,11 +197,11 @@ Berikut beberapa langkahnya :
 ```javascript
 {
     "success" : bool,
-    "message" : string,
-    "id_line": int,
-    "nama_line" : string,
+    "message" : char varying,
+    "id_line": bigint,
+    "nama_line" : char varying,
     "geom" : geometry,
-    "deskripsi" : string,
+    "deskripsi" : char varying,
 
 }
 ```
@@ -230,25 +230,25 @@ Berikut beberapa langkahnya :
 #### request Parames
 | Parameter     | Type     | Description                       |
 | :------------ | :------- | :-------------------------------- |
-| `id_line`    | `int`    | id dari line                     |
+| `id_line`    | `bigint`    | id dari line                     |
 
 
 #### request body
 | Parameter     | Type     | Description                       |
 | :------------ | :------- | :-------------------------------- |
-| `nama_line`  | `string` | nama tempat line                 |
+| `nama_line`  | `char varying` | nama tempat line                 |
 | `geom`        | `geometry` | lokasi atau geometry dari line                 |
-| `deskripsi`        | `string` | deskripsi lokasi dari line                 |
+| `deskripsi`        | `char varying` | deskripsi lokasi dari line                 |
 
 #### response
 ```javascript
 {
     "success" : bool,
-    "message" : string,
+    "message" : char varying,
     "id_line": int,
-    "nama_line" : string,
+    "nama_line" : char varying,
     "geom" : geometry,
-    "deskripsi" : string,
+    "deskripsi" : char varying,
 
 }
 ```
@@ -276,14 +276,14 @@ Berikut beberapa langkahnya :
 #### request Parames
 | Parameter     | Type     | Description                       |
 | :------------ | :------- | :-------------------------------- |
-| `id_line`    | `int`    | id dari line                     |
+| `id_line`    | `bigint`    | id dari line                     |
 
 
 #### response
 ```javascript
 {
     "success" : bool,
-    "message" : string,
+    "message" : char varying,
 }
 ```
 #### example response
@@ -304,7 +304,7 @@ Berikut beberapa langkahnya :
 ```javascript
 {
     "success" : bool,
-    "message" : string,
+    "message" : char varying,
     "data"    : object
 }
 ```
@@ -350,21 +350,21 @@ Berikut beberapa langkahnya :
 #### request body
 | Parameter     | Type     | Description                       |
 | :------------ | :------- | :-------------------------------- |
-| `id_line`    | `int`    | id dari line                     |
-| `nama_line`  | `string` | nama tempat dari line                 |
+| `id_line`    | `bigint`    | id dari line                     |
+| `nama_line`  | `char varying` | nama tempat dari line                 |
 | `geom`        | `geometry` | lokasi atau koordinat dari line                 |
-| `deskripsi`        | `string` | deskripsi lokasi dari line                 |
+| `deskripsi`        | `char varying` | deskripsi lokasi dari line                 |
 
 
 #### response
 ```javascript
 {
     "success" : bool,
-    "message" : string,
-    "id_line": int,
-    "nama_line" : string,
+    "message" : char varying,
+    "id_line": bigint,
+    "nama_line" : char varying,
     "geom" : geometry,
-    "deskripsi" : string,
+    "deskripsi" : char varying,
 
 }
 ```
@@ -393,13 +393,13 @@ Berikut beberapa langkahnya :
 #### request Parames
 | Parameter     | Type     | Description                       |
 | :------------ | :------- | :-------------------------------- |
-| `id_line`    | `int`    | id dari line                     |
+| `id_line`    | `bigint`    | id dari line                     |
 
 
 #### request body
 | Parameter     | Type     | Description                       |
 | :------------ | :------- | :-------------------------------- |
-| `nama_line`  | `string` | nama tempat line                 |
+| `nama_line`  | `char varying` | nama tempat line                 |
 | `geom`        | `geometry` | lokasi atau geometry dari line                 |
 | `deskripsi`        | `string` | deskripsi lokasi dari line                 |
 
@@ -407,11 +407,11 @@ Berikut beberapa langkahnya :
 ```javascript
 {
     "success" : bool,
-    "message" : string,
-    "id_line": int,
-    "nama_line" : string,
+    "message" : char varying,
+    "id_line": bigint,
+    "nama_line" : char varying,
     "geom" : geometry,
-    "deskripsi" : string,
+    "deskripsi" : char varying,
 
 }
 ```
@@ -439,14 +439,14 @@ Berikut beberapa langkahnya :
 #### request Parames
 | Parameter     | Type     | Description                       |
 | :------------ | :------- | :-------------------------------- |
-| `id_line`    | `int`    | id dari line                     |
+| `id_line`    | `bigint`    | id dari line                     |
 
 
 #### response
 ```javascript
 {
     "success" : bool,
-    "message" : string,
+    "message" : char varying,
 }
 ```
 #### example response
@@ -515,21 +515,21 @@ Berikut beberapa langkahnya :
 #### request body
 | Parameter     | Type     | Description                       |
 | :------------ | :------- | :-------------------------------- |
-| `id_polygon`    | `int`    | id dari polygon                     |
-| `nama_polygon`  | `string` | nama tempat dari polygon                 |
+| `id_polygon`    | `bigint`    | id dari polygon                     |
+| `nama_polygon`  | `char varying` | nama tempat dari polygon                 |
 | `geom`        | `geometry` | lokasi atau koordinat dari polygon                 |
-| `deskripsi`        | `string` | deskripsi lokasi dari polygon                 |
+| `deskripsi`        | `char varying` | deskripsi lokasi dari polygon                 |
 
 
 #### response
 ```javascript
 {
     "success" : bool,
-    "message" : string,
+    "message" : char varying,
     "id_polygon": int,
-    "nama_polygon" : string,
+    "nama_polygon" : char varying,
     "geom" : geometry,
-    "deskripsi" : string,
+    "deskripsi" : char varying,
 
 }
 ```
@@ -556,25 +556,25 @@ Berikut beberapa langkahnya :
 #### request Parames
 | Parameter     | Type     | Description                       |
 | :------------ | :------- | :-------------------------------- |
-| `id_polygon`    | `int`    | id dari polygon                     |
+| `id_polygon`    | `bigint`    | id dari polygon                     |
 
 
 #### request body
 | Parameter     | Type     | Description                       |
 | :------------ | :------- | :-------------------------------- |
-| `nama_polygon`  | `string` | nama tempat polygon                 |
+| `nama_polygon`  | `char varying` | nama tempat polygon                 |
 | `geom`        | `geometry` | lokasi atau geometry dari polygon                 |
-| `deskripsi`        | `string` | deskripsi lokasi dari polygon                 |
+| `deskripsi`        | `char varying` | deskripsi lokasi dari polygon                 |
 
 #### response
 ```javascript
 {
     "success" : bool,
-    "message" : string,
-    "id_polygon": int,
-    "nama_polygon" : string,
+    "message" : char varying,
+    "id_polygon": bigint,
+    "nama_polygon" : char varying,
     "geom" : geometry,
-    "deskripsi" : string,
+    "deskripsi" : char varying,
 
 }
 ```
@@ -604,14 +604,14 @@ Berikut beberapa langkahnya :
 #### request Parames
 | Parameter     | Type     | Description                       |
 | :------------ | :------- | :-------------------------------- |
-| `id_polygon`    | `int`    | id dari polygon                     |
+| `id_polygon`    | `bigint`    | id dari polygon                     |
 
 
 #### response
 ```javascript
 {
     "success" : bool,
-    "message" : string,
+    "message" : char varying,
 }
 ```
 #### example response
